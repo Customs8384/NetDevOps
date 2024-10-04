@@ -1,0 +1,89 @@
+Origin: Cumulus Networks
+Label: cumulus-repository
+Suite: current
+Codename: CumulusLinux-3
+Date: Mon, 04 Apr 2022 12:37:57 UTC
+Architectures: amd64 armel
+Components: cumulus upstream
+Description: Cumulus Networks repository for 3.X releases
+MD5Sum:
+ 2fc28133bce6148d303e22f906e306f6 125179 cumulus/binary-amd64/Packages
+ d9df5a5a57ccb0601d9b032a3d5cb0f7 33660 cumulus/binary-amd64/Packages.gz
+ 44a4480a82f2d5491a176f98cfb00b38 165 cumulus/binary-amd64/Release
+ 582ed095fe4d6d01c8e7619759b398ed 6419 cumulus/debian-installer/binary-amd64/Packages
+ 8f8de8a5889db76c226d1a04fd53da24 2284 cumulus/debian-installer/binary-amd64/Packages.gz
+ 439308aacc43dff682925cd2949e235f 113810 cumulus/binary-armel/Packages
+ d89198deb5eab77a0340b365f88dd923 30290 cumulus/binary-armel/Packages.gz
+ 2266fddbb834938969011753d852b046 165 cumulus/binary-armel/Release
+ efdb3ac86cfbd0c19b6d4ee579e33d06 5708 cumulus/debian-installer/binary-armel/Packages
+ 26103a51f5a556c07ca2c43cd07c0d54 2076 cumulus/debian-installer/binary-armel/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 cumulus/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 cumulus/source/Sources.gz
+ 5b44864cdac92068175b8df2e21c7d96 166 cumulus/source/Release
+ 6805456342516fc7ccaa12a9532c70b6 1736128 upstream/binary-amd64/Packages
+ d069608f6c6f2618973ba83c1f2b9f4d 513190 upstream/binary-amd64/Packages.gz
+ 9d711b87eb988d1629b0941201ee39a7 166 upstream/binary-amd64/Release
+ 1776294ff890cbe7591c9ccbb9ca11fb 82412 upstream/debian-installer/binary-amd64/Packages
+ df0a21011eb859d7639a18a7b1db9f8d 25159 upstream/debian-installer/binary-amd64/Packages.gz
+ 36861715a27a7162278ead57256c7d88 1687796 upstream/binary-armel/Packages
+ a065f7938861f22db299d6059aa25ec2 500522 upstream/binary-armel/Packages.gz
+ 63e9d11f68b59571cea550cbb85b117e 166 upstream/binary-armel/Release
+ 81af3c94b3be6a054f2a58522b6c7aea 81767 upstream/debian-installer/binary-armel/Packages
+ baabbafd3cd963ee89df9e24c1dec820 24937 upstream/debian-installer/binary-armel/Packages.gz
+ b0230a25f6b9a77c46797b186fc90dd5 763805 upstream/source/Sources
+ 5fd0bbe1045dbb3436ac2e90c97e5ea7 213879 upstream/source/Sources.gz
+ 1705f221c4255bd8ff5b1df39af52210 167 upstream/source/Release
+SHA1:
+ 81b7f706ebc14ac2152198c32dc675dd3c364c59 125179 cumulus/binary-amd64/Packages
+ 0764f6e98490555c8bbf31b26c795f19d4823d80 33660 cumulus/binary-amd64/Packages.gz
+ 34ec25b4e9722320489a4bfb658f9cf777cfea8d 165 cumulus/binary-amd64/Release
+ b2ce4ad525daacf15183640131e337f90dead35c 6419 cumulus/debian-installer/binary-amd64/Packages
+ 075ec033963f9598fd3c9442bb19eef3725955fa 2284 cumulus/debian-installer/binary-amd64/Packages.gz
+ b177dd7cb99087fbaf577ec7405085c4b5467116 113810 cumulus/binary-armel/Packages
+ c084730350e4713412955a346a9a467b7413d52e 30290 cumulus/binary-armel/Packages.gz
+ 3c0db9a7b8a771edde7aed5ae0594f279e51e3b9 165 cumulus/binary-armel/Release
+ 9a913351059029bd04bda1edcc923d0b9fc9a110 5708 cumulus/debian-installer/binary-armel/Packages
+ 5aa84db676b3a0b968c595d75616630bedb0a779 2076 cumulus/debian-installer/binary-armel/Packages.gz
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 cumulus/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 cumulus/source/Sources.gz
+ 43d1b19d2aa799eb48df585754fdafb8062874a6 166 cumulus/source/Release
+ c3e30ebfe99952045bc07b3f7d3dfd1efc93e3cc 1736128 upstream/binary-amd64/Packages
+ b2cbcb423bc60428061fd64adccde4571d6fd5c0 513190 upstream/binary-amd64/Packages.gz
+ c80f967b8c8e93abe40191151d2996b5472d0733 166 upstream/binary-amd64/Release
+ 052338d1fe2095d8a6cf5a3d71a9d6146f3761c8 82412 upstream/debian-installer/binary-amd64/Packages
+ a315c9b3136b0f09a575f910f64651c3d44b5c8e 25159 upstream/debian-installer/binary-amd64/Packages.gz
+ e189f8946967f91e13a97e5f1c7cff26662174ee 1687796 upstream/binary-armel/Packages
+ d01438d215c317a3737dbd958a4309585535abe8 500522 upstream/binary-armel/Packages.gz
+ ca717eb9d9e31df561eac3c3daf3b2efd4635b03 166 upstream/binary-armel/Release
+ 9c9544098e6811f7be00ef19c0d9fe7cd7f5f8fb 81767 upstream/debian-installer/binary-armel/Packages
+ 36f97633d6feb01ef8fe3afbeafcb989883029cc 24937 upstream/debian-installer/binary-armel/Packages.gz
+ 16160e5f6f15b067f2fbbc052df9726dc54b195b 763805 upstream/source/Sources
+ 1881069cb66eec033c2e95ac4025e3015606509a 213879 upstream/source/Sources.gz
+ fc8af15ddfca7f89aa1b746810b9eb825fafc726 167 upstream/source/Release
+SHA256:
+ b9aed17a322558361e5539dd46f3be9db2e4a6769441ba2a8331e3ebf3ec8d2b 125179 cumulus/binary-amd64/Packages
+ cdca68ef317365ed5acb9347a349bb9f9d32e2112674b30af3dcd50acaa75bd3 33660 cumulus/binary-amd64/Packages.gz
+ 57d0b3b9290cf54275b14183825f21083a94b1d1848f1571d6a3ebbd641528e4 165 cumulus/binary-amd64/Release
+ 1b94b32f27c981f331502b4c7f1879997d80c35f23a0306cf9d1aadd26a8ee9f 6419 cumulus/debian-installer/binary-amd64/Packages
+ 58ccd1f78f2dc93c75ab52f27514c5a56c7aee80c424fbf23cf5df77f5578c61 2284 cumulus/debian-installer/binary-amd64/Packages.gz
+ 6d51bbde24aff07fa93b616e96a031ee3606f117f0ea091b4f9dde104d313480 113810 cumulus/binary-armel/Packages
+ 3fc1e8a791f917ceef17ec2537aa1f45312c9b71e4253e7c5749cbe2c3219b10 30290 cumulus/binary-armel/Packages.gz
+ d110139a20e7092a2d6077043a09832dff451a15c8a35be9557244b6f9312a11 165 cumulus/binary-armel/Release
+ dd18b8dcece5284c9eeb56b084e80bf8a486a6c7898616369ee3366f3e91cf1b 5708 cumulus/debian-installer/binary-armel/Packages
+ b03d0d3d2f1b2f86f8f7e312fcd7a0dd057f7bfdd5ea5e33ac409eefcb24c630 2076 cumulus/debian-installer/binary-armel/Packages.gz
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 cumulus/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 cumulus/source/Sources.gz
+ 219c71fd35841ee3e6fe4c19611184db9485b5f5b2f9d335e989a1fffa67f3a0 166 cumulus/source/Release
+ c8be839311dbd0b426e21ef3048afa423ba44d2ec0d23c94ff5ae3e1637c4602 1736128 upstream/binary-amd64/Packages
+ dd06d1da7cb29858c736bad9db70939446a31f6d69ec70755c076879cf7462e9 513190 upstream/binary-amd64/Packages.gz
+ bc069e6c38bad23d62c0f77e03880973039a94d6a7c5caf9f2416c02c21c998a 166 upstream/binary-amd64/Release
+ e7c21ed7fc09d1b782e416b9e8d13b90d9ebd680d839d91daa3f43776c7549ff 82412 upstream/debian-installer/binary-amd64/Packages
+ a164ff5001cafe131ddfb2cabd4f9f611a6fad81424e08c6720c986707c601cb 25159 upstream/debian-installer/binary-amd64/Packages.gz
+ 61e9f5bddad8bc9723d6b09f5c23a235283fb761e516660165997b2cf2181c52 1687796 upstream/binary-armel/Packages
+ d2f225bd9cd269dbc816df79c5a735c1d6219f7f4d54671efc4403ecb47edb43 500522 upstream/binary-armel/Packages.gz
+ 7b4dec49b3d4022d6cb3e33b5c113036ad28ef32fee9fe5b93a641a9fb7066d4 166 upstream/binary-armel/Release
+ 074cfd91aac60af5a8649cc1d7035eba025b78002d7716ef09b1f54903bfd5a0 81767 upstream/debian-installer/binary-armel/Packages
+ 67b9141872165b80ee4765af75530aad3d355a6ada2725db8b6506aa8dafe198 24937 upstream/debian-installer/binary-armel/Packages.gz
+ 7d06930538ceacfb2739309345eb720c174528c390e84e388ca0060aae987343 763805 upstream/source/Sources
+ dfad31fd38d7f605e2a471b44ed933ee2369be6cd5293c94d0b487a8ac87e710 213879 upstream/source/Sources.gz
+ 0d1c374bdc0aa9e962a5fc600f8da6999d65a38419422c8a6b5ade506fbd7f55 167 upstream/source/Release
