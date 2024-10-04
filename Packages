@@ -1,0 +1,161 @@
+Package: base-installer
+Version: 1.154-cl3u1
+Architecture: all
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Installed-Size: 176
+Depends: cdebconf-udeb, di-utils-mapdevfs, di-utils (>= 1.48), rootskel (>= 1.19)
+Priority: required
+Section: debian-installer
+Filename: pool/cumulus/b/base-installer/base-installer_1.154-cl3u1_all.udeb
+Size: 56122
+SHA256: 113bd88cc78b056a2821a36cd39bda35b192cf4f4aa8e555712371fa35ddf007
+SHA1: 7510d9157ce64d3d16c772b337fd09910ff9f4f3
+MD5sum: 36e9721b02552659cd10667a34455c81
+Description: base system installation framework
+
+Package: bootstrap-base
+Source: base-installer
+Version: 1.154-cl3u1
+Architecture: amd64
+Installer-Menu-Item: 6500
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Installed-Size: 699
+Depends: libc6-udeb (>= 2.19), libdebconfclient0-udeb, libdebian-installer4-udeb (>= 0.99+deb8u1), mounted-partitions, created-fstab, base-installer, debootstrap-udeb (>= 1.0.7), gpgv-udeb, debian-archive-keyring-udeb, archdetect, cumulus-archive-keyring-udeb
+Provides: installed-base, kernel-installer
+Priority: required
+Section: debian-installer
+Filename: pool/cumulus/b/base-installer/bootstrap-base_1.154-cl3u1_amd64.udeb
+Size: 235798
+SHA256: f52f878fc6822ec389127c7ca9a82f5147280f6c8539a0fe5fc26ddc46396c58
+SHA1: a276244efd3e60f1c77da0ab103ecb724603e123
+MD5sum: 7cafbdb3ab44ad1b735e00b18c1d2ef5
+Description: Install the base system
+
+Package: cumulus-archive-keyring-udeb
+Source: cumulus-archive-keyring
+Version: 2
+Architecture: all
+Maintainer: Cumulus <support@cumulusnetworks.com>
+Installed-Size: 28
+Recommends: gpgv-udeb
+Priority: standard
+Section: debian-installer
+Filename: pool/cumulus/c/cumulus-archive-keyring/cumulus-archive-keyring-udeb_2_all.udeb
+Size: 8544
+SHA256: b0d3377764d1cbbc96abc94591c545636e326394767af5cc3bfa9d3fe68ed1b4
+SHA1: adc3ebb07353dc417d42240ab616bb844715383a
+MD5sum: 3a6090d6ee4b53ef1e6cc8ec451aed69
+Description: GnuPG archive keys for Cumulus apt archives
+
+Package: grub-installer
+Version: 1.117-cl3u1
+Architecture: amd64
+Installer-Menu-Item: 7400
+Maintainer: Cumulus Install System Team <kernel@lists.cumulusnetworks.com>
+Installed-Size: 737
+Depends: libc6-udeb (>= 2.19), libparted2-udeb, cdebconf-udeb, kernel-installer, created-fstab, di-utils (>= 1.15), di-utils-mapdevfs, os-prober, partman-utils
+Provides: bootable-system
+Priority: standard
+Section: debian-installer
+Filename: pool/cumulus/g/grub-installer/grub-installer_1.117-cl3u1_amd64.udeb
+Size: 281292
+SHA256: c95bfd0a28f12204c3c918951cb143d334b21a2226477f5f70c5daa157d63e96
+SHA1: f33d6f547422df617e9b30dfa619fec24222aa57
+MD5sum: d060bd5d7509ae1c81c65ab5754e9952
+Description: Install GRUB on a hard disk
+
+Package: isc-dhcp-client-udeb
+Source: isc-dhcp
+Version: 4.3.1-6-cl3u2
+Architecture: amd64
+Maintainer: dev-support <dev-support@cumulusnetworks.com>
+Installed-Size: 516
+Depends: libc6-udeb (>= 2.19), libdns-export100-udeb, libirs-export91-udeb, libisc-export95-udeb
+Priority: extra
+Section: debian-installer
+Filename: pool/cumulus/i/isc-dhcp/isc-dhcp-client-udeb_4.3.1-6-cl3u2_amd64.udeb
+Size: 194180
+SHA256: 4bd1a6ca32080f527b7e7f9a4f5b018cf12b3ff7656c42424d3c950a8dd32ee7
+SHA1: cae355f34f5216dfec838939bb2720e5e84a8505
+MD5sum: e68d03aa13d84deeaee32ca2e30fb732
+Description: ISC DHCP Client for debian-installer
+
+Package: libnl-3-200-udeb
+Source: libnl3
+Version: 3.2.27-cl3u2
+Architecture: amd64
+Maintainer: Cumulus Networks dev support <dev-support@cumulusnetworks.com>
+Installed-Size: 169
+Depends: libc6-udeb (>= 2.19)
+Priority: optional
+Section: debian-installer
+Filename: pool/cumulus/libn/libnl3/libnl-3-200-udeb_3.2.27-cl3u2_amd64.udeb
+Size: 54098
+SHA256: 6e20825eb42bd56c59323e15307a49b4ed83a30ded78843de62d9145b687b202
+SHA1: c551b4012490065cbad0de181fbcab71c07fcb6c
+MD5sum: 78d3fbaef8b7d12528da9551df21128d
+Description: library for dealing with netlink sockets
+ This is a library for applications dealing with netlink sockets.
+ The library provides an interface for raw netlink messaging and various
+ netlink family specific interfaces.
+ .
+ This package is a udeb. It's only useful inside of debian-installer.
+
+Package: libnl-genl-3-200-udeb
+Source: libnl3
+Version: 3.2.27-cl3u2
+Architecture: amd64
+Maintainer: Cumulus Networks dev support <dev-support@cumulusnetworks.com>
+Installed-Size: 44
+Depends: libnl-3-200-udeb (= 3.2.27-cl3u2), libc6-udeb (>= 2.19)
+Priority: optional
+Section: debian-installer
+Filename: pool/cumulus/libn/libnl3/libnl-genl-3-200-udeb_3.2.27-cl3u2_amd64.udeb
+Size: 9860
+SHA256: 4cd9f746d14d080afbe9331c9f15f7dd8ab0eae9a41ce288b9f71f061bdfdd82
+SHA1: 05e3f964283453c75e8b83109ef93f7f414a64bf
+MD5sum: 6443e2b9db9ae690c1572f877f67c74a
+Description: library for dealing with netlink sockets - generic netlink
+ This is a library for applications dealing with netlink sockets.
+ The library provides an interface for raw netlink messaging and various
+ netlink family specific interfaces.
+ .
+ This package is a udeb. It's only useful inside of debian-installer.
+
+Package: onieseed
+Source: cumulus-onie
+Version: 0.11
+Architecture: all
+Maintainer: Cumulus Installer Team <dev-support@cumulusnetworks.com>
+Installed-Size: 72
+Depends: preseed-common, parted-udeb
+Conflicts: mountmedia
+Priority: standard
+Section: debian-installer
+Filename: pool/cumulus/c/cumulus-onie/onieseed_0.11_all.udeb
+Size: 6636
+SHA256: c11720e7de54043dfae9676f7930df0f7f06ed7d397335181dac3f194fff825d
+SHA1: 9683b1c0a399a37a6eba3913df0b924ec7063808
+MD5sum: 51a31ad18c2f412210bb07e213a0438f
+Description: Load preseed configuration based on ONIE configuration
+ onieseed is a package that intelligently automates debian-installer (d-i)
+ and integrates d-i with ONIE. The package is mainly a bunch of debian
+ preseed selections combined with reading the kernel command line to
+ properly select the disk that needs to be provisioned.
+
+Package: partman-btrfs
+Version: 20-cl3u1
+Architecture: all
+Maintainer: dev-support <dev-support@cumulusnetworks.com>
+Installed-Size: 94
+Depends: cdebconf-udeb, btrfs-tools-udeb, btrfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Provides: partman-filesystem
+Priority: standard
+Section: debian-installer
+Filename: pool/cumulus/p/partman-btrfs/partman-btrfs_20-cl3u1_all.udeb
+Size: 7464
+SHA256: b06115e397d7c6638a5aee79adaf5d1c234d202347dfca904763ed83ee976739
+SHA1: 66e86b748cab9970c67274d9b657ea4dec5fa727
+MD5sum: e8ed222ab434f5acb515a9fa209b971e
+Description: Add to partman support for btrfs
+
