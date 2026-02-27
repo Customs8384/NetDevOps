@@ -29,15 +29,21 @@ ls -ld /etc/sv /etc/service /var/service /var/run/runit /run/runit 2>/dev/null |
 ls -ld /etc/sv/spice-vdagentd /etc/service/spice-vdagentd /var/service/spice-vdagentd 2>/dev/null || true
 
 
-
-# check run script metadata
-ls -l /etc/sv/spice-vdagentd/run
-head -n 5 /etc/sv/spice-vdagentd/run
-
-# check runit process and init type
+# 1) Confirm init and runit processes
 ps -p 1 -o comm=
-pgrep -a runsvdir || true
+pgrep -a runsvdir || pgrep -a runsv || true
 
-# try to bring the service up and show status
-sv status spice-vdagentd || true
-sv up spice-vdagentd || true
+# 2) Create the service link (safe, idempotent)
+sudo ln -sf /etc/sv/spice-vdagentd /etc/service/spice-vdagentd
+
+# 3) Ask sv to bring the service up
+sudo sv up spice-vdagentd || sudo sv restart spice-vdagentd
+
+# 4) If sv/runsvdir are not present or not running, start runsvdir supervising /etc/service
+# Only run this if your distro expects runsvdir to be started manually
+sudo runsvdir -P /etc/service & disown
+
+# 5) Verify supervise directory and status
+ls -la /etc/sv/spice-vdagentd/supervise
+sv status spice-vdagentd
+
