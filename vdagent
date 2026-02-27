@@ -17,3 +17,18 @@ exec 2>&1
 exec /usr/sbin/spice-vdagentd --no-daemon
 RUN'
 sudo chmod 755 /etc/sv/spice-vdagentd/run
+
+# show service dir and link target
+ls -ld /etc/sv/spice-vdagentd /etc/service/spice-vdagentd /var/service/spice-vdagentd
+
+# check run script metadata
+ls -l /etc/sv/spice-vdagentd/run
+head -n 5 /etc/sv/spice-vdagentd/run
+
+# check runit process and init type
+ps -p 1 -o comm=
+pgrep -a runsvdir || true
+
+# try to bring the service up and show status
+sv status spice-vdagentd || true
+sv up spice-vdagentd || true
