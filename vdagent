@@ -21,6 +21,15 @@ sudo chmod 755 /etc/sv/spice-vdagentd/run
 # show service dir and link target
 ls -ld /etc/sv/spice-vdagentd /etc/service/spice-vdagentd /var/service/spice-vdagentd
 
+# show PID 1 (init) and whether runit is running
+ps -p 1 -o comm=
+
+# show common runit service dirs and your service paths
+ls -ld /etc/sv /etc/service /var/service /var/run/runit /run/runit 2>/dev/null || true
+ls -ld /etc/sv/spice-vdagentd /etc/service/spice-vdagentd /var/service/spice-vdagentd 2>/dev/null || true
+
+
+
 # check run script metadata
 ls -l /etc/sv/spice-vdagentd/run
 head -n 5 /etc/sv/spice-vdagentd/run
