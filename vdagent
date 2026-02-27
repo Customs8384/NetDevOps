@@ -9,26 +9,6 @@ RUN
 sudo chmod 755 /etc/sv/spice-vdagentd/run
 sudo chown root:root /etc/sv/spice-vdagentd/run
 
-sudo bash -c 'cat > /etc/sv/spice-vdagentd/run <<'"'"'RUN'"'"'
-#!/bin/sh
-mkdir -p /run/spice-vdagentd
-chown root:root /run/spice-vdagentd
-exec 2>&1
-exec /usr/sbin/spice-vdagentd --no-daemon
-RUN'
-sudo chmod 755 /etc/sv/spice-vdagentd/run
-
-# show service dir and link target
-ls -ld /etc/sv/spice-vdagentd /etc/service/spice-vdagentd /var/service/spice-vdagentd
-
-# show PID 1 (init) and whether runit is running
-ps -p 1 -o comm=
-
-# show common runit service dirs and your service paths
-ls -ld /etc/sv /etc/service /var/service /var/run/runit /run/runit 2>/dev/null || true
-ls -ld /etc/sv/spice-vdagentd /etc/service/spice-vdagentd /var/service/spice-vdagentd 2>/dev/null || true
-
-
 # 1) Confirm init and runit processes
 ps -p 1 -o comm=
 pgrep -a runsvdir || pgrep -a runsv || true
@@ -46,4 +26,6 @@ sudo runsvdir -P /etc/service & disown
 # 5) Verify supervise directory and status
 ls -la /etc/sv/spice-vdagentd/supervise
 sv status spice-vdagentd
+
+
 
