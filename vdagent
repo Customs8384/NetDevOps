@@ -1,18 +1,19 @@
-# install package
-apt update
-apt install -y spice-vdagent
-
-# create runit service
-mkdir -p /etc/sv/spice-vdagentd
-cat > /etc/sv/spice-vdagentd/run <<'RUN'
+sudo mkdir -p /etc/sv/spice-vdagentd
+sudo tee /etc/sv/spice-vdagentd/run > /dev/null <<'RUN'
 #!/bin/sh
-# ensure runtime dir exists (some distros expect /run/spice-vdagentd)
 mkdir -p /run/spice-vdagentd
 chown root:root /run/spice-vdagentd
 exec 2>&1
 exec /usr/sbin/spice-vdagentd --no-daemon
 RUN
-chmod +x /etc/sv/spice-vdagentd/run
+sudo chmod 755 /etc/sv/spice-vdagentd/run
+sudo chown root:root /etc/sv/spice-vdagentd/run
 
-# enable service (antiX runit layout may use sv or ln -s)
-ln -s /etc/sv/spice-vdagentd /etc/service/
+sudo bash -c 'cat > /etc/sv/spice-vdagentd/run <<'"'"'RUN'"'"'
+#!/bin/sh
+mkdir -p /run/spice-vdagentd
+chown root:root /run/spice-vdagentd
+exec 2>&1
+exec /usr/sbin/spice-vdagentd --no-daemon
+RUN'
+sudo chmod 755 /etc/sv/spice-vdagentd/run
